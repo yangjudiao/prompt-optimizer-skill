@@ -10,7 +10,9 @@ $requiredFiles = @(
   ".github/PULL_REQUEST_TEMPLATE.md",
   ".github/workflows/ci.yml",
   "references/ears-cheatsheet.md",
-  "references/clarification-playbook.md"
+  "references/clarification-playbook.md",
+  "references/devbooks-integration-patterns.md",
+  "references/high-quality-prompt-patterns.md"
 )
 
 $missing = @()
@@ -27,6 +29,12 @@ if ($missing.Count -gt 0) {
 $skillText = Get-Content -Raw -Path "SKILL.md"
 if ($skillText -notmatch "## Output Contract") {
   Write-Error "SKILL.md must contain '## Output Contract'."
+}
+if ($skillText -notmatch "## Operating Modes") {
+  Write-Error "SKILL.md must contain '## Operating Modes'."
+}
+if ($skillText -notmatch "Execution Report") {
+  Write-Error "SKILL.md must define 'Execution Report' in output contract."
 }
 
 Write-Host "Validation passed. Required OSS baseline is present."

@@ -1,4 +1,4 @@
 interface:
   display_name: "Prompt Optimizer"
-  short_description: "Optimize vague prompts using research + EARS"
-  default_prompt: "Use $prompt-optimizer-codex to rewrite my vague prompt into a testable specification."
+  short_description: "Optimize vague prompts and optionally run them with acceptance gates"
+  default_prompt: "Use $prompt-optimizer-codex to rewrite my vague prompt into a testable specification, then execute it with an evidence-based report."
