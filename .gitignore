@@ -1,0 +1,17 @@
+# Local artifacts
+*.log
+*.tmp
+
+# OS/editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Python cache (if validators/scripts expand later)
+__pycache__/
+*.pyc
+
+# Render temp outputs
+tmp/
+output/
